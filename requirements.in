@@ -1,0 +1,6 @@
+asyncssh~=2.2
+typeguard~=2.9
+pytest
+coverage
+pytest-cov
+pytest-asyncio

@@ -1,0 +1,7 @@
+/ssh_host_key
+/ssh_host_key.pub
+/.coverage-binfiles
+/.tox
+/aiosshim.egg-info
+__pycache__
+/out

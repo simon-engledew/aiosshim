@@ -1,0 +1,6 @@
+{
+  "editor.formatOnSave": true,
+  "editor.tabSize": 4,
+  "python.formatting.provider": "black",
+  "python.pythonPath": "${workspaceFolder}/.tox/py38/bin/python3.8"
+}
