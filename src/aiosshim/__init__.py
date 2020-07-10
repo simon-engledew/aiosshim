@@ -5,7 +5,7 @@ import typeguard
 
 
 async def handle_client(process: asyncssh.SSHServerProcess):
-    process.stdout.write('connected!')
+    process.stdout.write("connected!")
     process.exit(0)
 
 
@@ -27,7 +27,10 @@ class PermissiveSSHServer(asyncssh.SSHServer):
 
 
 @typeguard.typechecked
-async def start_server(host: str, port: int) -> asyncio.base_events.Server:
+async def start_server(host: str, port: int = 0) -> asyncio.base_events.Server:
+    """
+    Start a server running an actor process
+    """
     return await asyncssh.create_server(
         PermissiveSSHServer,
         host,
@@ -48,4 +51,6 @@ U2Yt1soQVbsRB0RLSit5AAAAEXNpbW9uQHVyaWVsLmxvY2FsAQIDBA==
         process_factory=handle_client,
     )
 
-__all__ = ['start_server']
+
+__all__ = ["start_server"]
+

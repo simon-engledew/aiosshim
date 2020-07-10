@@ -1,0 +1,18 @@
+site_name: aiosshim
+
+theme:
+  name: material
+
+nav:
+  - Overview: index.md
+  - Reference: reference.md
+
+plugins:
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          rendering:
+            show_root_heading: yes
+            show_source: true
+  - search
